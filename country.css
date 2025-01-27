@@ -1,0 +1,136 @@
+*{
+    /* margin: 0;
+    padding: 0; */
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+body{
+    --background-color: hsl(0, 0%, 98%);
+    --text-color: hsl(200, 15%, 8%);
+    --element-color: white;
+    font-family: Nunito , sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+body.dark{
+    --background-color: hsl(207, 26%, 17%);
+    --text-color: white;
+    --element-color: hsl(209, 23%, 22%);
+}
+.theme-switcher{
+    cursor: pointer;
+}
+.header{
+    box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.1);
+    padding-inline: 24px;
+    background-color: var(--element-color);
+}
+.header-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin-inline: auto;
+}
+
+.title{
+    font-weight: 800;
+}
+
+main{
+    padding: 16px;
+}
+.back-arrow{
+    padding: 8px 24px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    margin-top: 32px;
+    display: inline-block;
+    cursor: pointer;
+    background-color: var(--element-color);
+}
+.container{
+    max-width: 1200px;
+    margin-inline: auto;
+}
+.country-info-container{
+    display: flex;
+    gap: 64px;
+    margin-top: 64px;
+}
+
+.country-img{
+    width: 40%;
+}
+
+.country-img img{
+    width: 100%;
+}
+
+.country-text-info{
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    gap: 20px;
+}
+.country-name{
+    font-weight: 800;
+}
+.country-up{
+    display: flex;
+   max-height: 150px;
+   flex-wrap: wrap;
+   row-gap: 16px;
+   column-gap: 64px;
+   flex-direction: column;
+}
+.country-up p{
+    margin: 0;
+}
+
+.border-countries{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.border-countries-cont a{
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+    padding: 4px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+@media (max-width: 900px) {
+    .country-container{
+        justify-content: center;
+    }
+    .title{
+        font-size: 16px;
+    }
+    .header-content p {
+        font-size: 12px;
+    }
+    .country-info-container{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
+        margin-top: 32px;
+    }
+    .country-up{
+        /* gap: 100px; */
+       max-height: unset;
+       /* flex-wrap: wrap;
+       row-gap: 16px;
+       column-gap: 64px;
+       flex-direction: column; */
+    }
+    .country-img{
+        width: 100%;
+        max-width: 400px;
+    }
+    
+}
